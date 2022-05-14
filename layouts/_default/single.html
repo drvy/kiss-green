@@ -9,7 +9,9 @@
                 <span class="categories">
                     Category:
                     {{ range . }}
-                        <a class="cat-{{ . | urlize }}" href="{{ "categories" | absURL}}/{{ . | urlize }}">{{- . -}}</a>
+                        <a class="cat-{{ . | urlize }}" href="{{ "categories" | absURL }}/{{ . | urlize }}">
+                            {{- . -}}
+                        </a>
                     {{ end }}
                 </span>
             {{ end }}

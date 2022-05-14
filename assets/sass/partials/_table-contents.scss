@@ -1,6 +1,8 @@
 .table-contents {
     color: $primary-color-07;
-    padding: 5px;
+    background-color: $page-background;
+    border-radius: .25rem;
+    padding: 5px 10px;
 
     & > span  {
         color: $black;

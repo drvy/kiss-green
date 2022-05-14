@@ -1,12 +1,12 @@
 // Basic colors
 $white: #fff;
-$black: #222;
+$black: #212529;
 $black-07: rgba($black, .7);
 $black-03: rgba($black, .3);
 $yellow: rgba(#FFFF00, .7);
 
 // Fonts
-$primary-font: 'Open Sans', sans-serif;
+$primary-font: 'Miriam Libre', sans-serif;
 $code-font: 'monospace';
 
 // Colors
@@ -19,7 +19,7 @@ $primary-background: $white;
 $primary-background-07: rgba($primary-background, .7);
 $primary-background-03: rgba($primary-background, .3);
 
-$page-background: #f5f5f5;
+$page-background: #fafafa;
 
 // Table
 $table-background: $white;

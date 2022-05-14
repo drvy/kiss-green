@@ -1,15 +1,10 @@
 .post-entry {
     background-color: $primary-background;
-    border: 2px solid $primary-color;
-    border-bottom-width: 6px;
-    border-radius: 10px;
+    border: 1px solid $primary-color-03;
+    border-radius: .25rem;
     margin-bottom: 15px;
     padding: 15px;
     transition: transform .1s ease-in;
-
-    &.full {
-        border-top-width: 6px;
-    }
 
     a {
         &:active { transform: scale(.95); }
@@ -136,7 +131,8 @@
         }
 
         hr {
-            border-color: $primary-color-03;
+            border: 0;
+            border-bottom: 1px dashed $primary-color-03;
         }
     }
 }

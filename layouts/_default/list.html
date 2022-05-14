@@ -24,7 +24,9 @@
                 {{- end }}
             </li>
 
-            <li class="current-page">{{ $paginator.PageNumber }} {{ i18n "pagination_sep" }} {{ $paginator.TotalPages }}</li>
+            <li class="current-page">
+                {{ $paginator.PageNumber }} {{ i18n "pagination_sep" }} {{ $paginator.TotalPages }}
+            </li>
 
             <li class="next-page">
                 {{- if $paginator.HasNext }}
