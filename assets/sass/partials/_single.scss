@@ -39,10 +39,10 @@
                 }
 
                 span {
-                    background-color: $primary-background;
-                    border: 1px solid $primary-color-03;
+                    background-color: var(--primary-background);
+                    border: 1px solid var(--primary-color-03);
                     border-radius: .25rem;
-                    color: $primary-color-07;
+                    color: var(--primary-color-07);
                     display: block;
                     font-weight: normal;
                     margin-top: 5px;

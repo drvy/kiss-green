@@ -18,7 +18,7 @@ header.main-header {
         &.site-title {
             h1,
             h2 {
-                color: $primary-color-07;
+                color: var(--primary-color-07);
                 display: inline-block;
                 font-size: 1.4em;
                 font-weight: 700;
@@ -34,14 +34,14 @@ header.main-header {
             }
 
             h1 {
-                color: $primary-color;
+                color: var(--primary-color);
                 font-size: 1.8em;
             }
         }
     }
 
     nav {
-        color: $primary-color-07;
+        color: var(--primary-color-07);
         padding: 5px 0;
 
         ul {

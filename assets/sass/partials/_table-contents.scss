@@ -1,11 +1,11 @@
 .table-contents {
-    color: $primary-color-07;
-    background-color: $page-background;
+    color: var(--primary-color-07);
+    background-color: var(--page-background);
     border-radius: .25rem;
     padding: 5px 10px;
 
     & > span  {
-        color: $black;
+        color: var(--primary-color);
         display: block;
         font-weight: 700;
     }

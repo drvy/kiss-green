@@ -1,6 +1,6 @@
 .post-entry {
-    background-color: $primary-background;
-    border: 1px solid $primary-color-03;
+    background-color: var(--primary-background);
+    border: 1px solid var(--primary-color-03);
     border-radius: .25rem;
     margin-bottom: 15px;
     padding: 15px;
@@ -30,7 +30,7 @@
     }
 
     aside {
-        color: $primary-color-07;
+        color: var(--primary-color-07);
         font-size: .9rem;
         text-align: left;
         font-weight: 600;
@@ -53,7 +53,7 @@
             .title {
                 &,
                 a {
-                    color: $primary-color;
+                    color: var(--primary-color);
                     font-size: 1.8rem;
                     line-height: 1.2;
                     text-decoration: underline;
@@ -63,7 +63,7 @@
     }
 
     .entry-content {
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 1rem;
         line-height: 1.6;
 
@@ -106,16 +106,16 @@
             white-space: pre-wrap;
 
             code {
-                background-color: $code-background;
-                color: $code-color;
+                background-color: var(--code-background);
+                color: var(--code-color);
                 display: block;
                 padding: 0;
             }
         }
 
         code {
-            background-color: $page-background;
-            color: $primary-color;
+            background-color: var(--page-background);
+            color: var(--primary-color);
             display: inline-block;
             font-family: monospace;
             font-size: .9em;
@@ -130,7 +130,7 @@
             quotes: "\201C""\201D""\2018""\2019";
 
             :before {
-                color: $primary-color-03;
+                color: var(--primary-color-03);
                 content: open-quote;
                 font-size: 3em;
                 line-height: .1em;
@@ -141,24 +141,24 @@
         }
 
         table {
-            border: 1px solid $table-border;
+            border: 1px solid var(--table-border);
             border-collapse: collapse;
             font-size: 1em;
             margin: .5em 0;
             width: 100%;
 
             td, th {
-                border: 1px solid $table-border;
+                border: 1px solid var(--table-border);
                 padding: 0.2em;
             }
 
-            tr:nth-child(odd) { background: $table-odd; }
-            tr:nth-child(even)  { background: $table-even; }
+            tr:nth-child(odd) { background: var(--table-odd); }
+            tr:nth-child(even)  { background: var(--table-even); }
         }
 
         hr {
             border: 0;
-            border-bottom: 1px dashed $primary-color-03;
+            border-bottom: 1px dashed var(--primary-color-03);
         }
     }
 }

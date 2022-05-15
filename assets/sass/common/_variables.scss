@@ -39,3 +39,28 @@ $xs: 320px;
 $sm: 420px;
 $md: 760px;
 $lg: 1300px;
+
+// CSS variabels
+:root {
+    --primary-font: #{$primary-font};
+    --code-font: #{$code-font};
+
+    --primary-color: #{$primary-color};
+    --primary-color-07: #{$primary-color-07};
+    --primary-color-03: #{$primary-color-03};
+
+    --primary-background: #{$primary-background};
+    --primary-background-07: #{$primary-background-07};
+    --primary-background-03: #{$primary-background-03};
+
+    --page-background: #{$page-background};
+
+    --table-background: #{$table-background};
+    --table-border: #{$table-border};
+    --table-odd: #{$table-background};
+    --table-even: #{$table-even};
+
+    --code-background: #{$code-background};
+    --code-color: #{$code-color};
+}
+

@@ -2,7 +2,7 @@
     padding: 0;
 
     ul {
-        color: $primary-color;
+        color: var(--primary-color);
         list-style: none;
         display: flex;
         align-items: center;
@@ -26,9 +26,9 @@
             }
 
             a {
-                color: $primary-color;
-                background-color: $primary-background;
-                border-bottom: 2px solid $black-03;
+                color: var(--primary-color);
+                background-color: var(--primary-background);
+                border-bottom: 2px solid var(--primary-color-03);
                 padding: 5px;
                 text-decoration: none;
             }
