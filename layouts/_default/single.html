@@ -16,14 +16,16 @@
                 </span>
             {{ end }}
 
-            <span class="read-time">Reading time: {{ .ReadingTime }} min</span>
+            <span class="read-time">
+                {{ i18n "reading_time" }}: {{ .ReadingTime }} {{ i18n "min" }}
+            </span>
         </aside>
     </header>
 
     <section class="entry-content">
             {{- if and (ge (len .TableOfContents) 50) (ne .Site.Params.TableOfContents "false") -}}
             <div class="table-contents">
-                <span>Contents</span>
+                <span>{{ i18n "contents" }}</span>
                 {{ .TableOfContents }}
             </div>
         {{- end -}}
