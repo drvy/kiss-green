@@ -11,6 +11,14 @@
 
     <aside class="info">
         <span class="read-time">{{ .ReadingTime }} min</span>
-        <span class="tags">php</span>
+            {{ with .Params.categories }}
+                <span class="categories">
+                    <ul>
+                        {{ range . }}
+                            <li>{{- . -}}</li>
+                        {{ end }}
+                    </ul>
+                </span>
+            {{ end }}
     </aside>
 </article>

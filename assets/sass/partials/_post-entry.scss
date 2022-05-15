@@ -10,6 +10,25 @@
         &:active { transform: scale(.95); }
     }
 
+    .info {
+        .categories {
+            ul {
+                display: inline-block;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    &:not(:last-child)::after {
+                        content: ', ';
+                    }
+                }
+            }
+        }
+    }
+
     aside {
         color: $primary-color-07;
         font-size: .9rem;
