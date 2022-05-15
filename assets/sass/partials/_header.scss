@@ -20,12 +20,12 @@ header.main-header {
             h2 {
                 color: $primary-color-07;
                 display: inline-block;
-                font-size: 1.6em;
+                font-size: 1.4em;
                 font-weight: 700;
                 letter-spacing: -1px;
 
-                @media screen and (max-width: $sm) {
-                    font-size: 1.4em;
+                @media screen and (min-width: $sm) {
+                    font-size: 1.6em;
                 }
 
                 a {

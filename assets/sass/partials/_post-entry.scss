@@ -54,7 +54,7 @@
                 &,
                 a {
                     color: $primary-color;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     line-height: 1.2;
                     text-decoration: underline;
                 }
@@ -104,15 +104,22 @@
             font-size: .9em;
             padding: .5em;
             white-space: pre-wrap;
+
+            code {
+                background-color: $code-background;
+                color: $code-color;
+                display: block;
+                padding: 0;
+            }
         }
 
         code {
-            background-color: $primary-background;
+            background-color: $page-background;
             color: $primary-color;
-            display: block;
+            display: inline-block;
             font-family: monospace;
             font-size: .9em;
-            padding: .5em;
+            padding: .2em;
             white-space: pre-wrap;
         }
 
