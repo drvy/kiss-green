@@ -1,9 +1,12 @@
 .main-footer {
+    @extend .pad;
+
     color: var(--primary-color-07);
     font-size: .9rem;
     text-align: center;
     margin-top: 15px;
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     .license {
         display: block;

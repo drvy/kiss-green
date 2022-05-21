@@ -1,7 +1,9 @@
 .intro {
+    @extend .pad;
+
     color: var(--primary-color-07);
-    margin-top: 15px;
     margin-bottom: 40px;
+    margin-top: 15px;
 
     .title {
         color: var(--primary-color);
