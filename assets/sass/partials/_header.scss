@@ -3,13 +3,16 @@
  ------------ */
 
 header.main-header {
+    @extend .pad;
+
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     flex-wrap: warp;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     max-width: $nav-max-width;
 
     section {
