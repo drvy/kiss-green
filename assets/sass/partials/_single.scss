@@ -1,52 +1,84 @@
 .single {
     article {
         margin-top: 15px;
-    }
 
-    .title {
-        display: block;
-        font-size: 1.8em;
+        header {
+            width: 100%;
 
-        @media screen and (max-width: $lg) {
-            font-size: 1.6em;
-        }
+            .title {
+                display: block;
+                font-size: 1.4em;
+                margin: 20px 0;
 
-        @media screen and (max-width: $sm) {
-            font-size: 1.4em;
-        }
+                @media screen and (min-width: $lg) {
+                    font-size: 2em;
+                }
 
-        a {
-            text-decoration: none;
-        }
-    }
+                @media screen and (min-width: $sm) {
+                    font-size: 1.8em;
+                }
 
-    .info {
-        display: block;
-        text-align: left;
-
-        span {
-            display: inline-block;
-            background-color: $white;
-            border-bottom: 2px solid $black-03;
-            color: $black-07;
-            padding: 2px;
-
-            margin-top: 1em;
-
-            &.read-time {
-                padding: 4px;
+                a {
+                    text-decoration: none;
+                }
             }
 
-            &:not(:last-child) {
-                margin-right: 3px;
-            }
+            .info {
+                align-items: stretch;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: stretch;
+                margin-top: 1em;
+                width: 100%;
 
-            a {
-                padding: 0 2px;
-                &:not(:last-child)::after {
-                    content: ', ';
-                    font-size: 1em;
-                    color: inherit;
+                @media screen and (min-width: $md) {
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                }
+
+                span {
+                    background-color: var(--primary-background);
+                    border: 1px solid var(--primary-color-03);
+                    border-radius: .25rem;
+                    color: var(--primary-color-07);
+                    display: block;
+                    font-weight: normal;
+                    margin-top: 5px;
+                    padding: 5px;
+                    width: 100%;
+
+                    @media screen and (min-width: $md) {
+                        margin-right: 5px;
+                        margin-top: 0;
+                        width: auto;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 5px;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    &::after {
+                        display: inline-block;
+                        content: " ";
+                        white-space: pre;
+                        border: 2px solid transparent;
+                    }
+
+                    a {
+                        padding: 0;
+
+                        &:not(:last-child)::after {
+                            content: ',';
+                            font-size: 1em;
+                            color: inherit;
+                        }
+                    }
                 }
             }
         }

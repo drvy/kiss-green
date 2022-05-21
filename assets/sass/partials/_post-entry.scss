@@ -1,18 +1,39 @@
 .post-entry {
-    background-color: $white;
-    padding: 15px;
+    background-color: var(--primary-background);
+    border: 1px solid var(--primary-color-03);
+    border-radius: .25rem;
     margin-bottom: 15px;
-    border-bottom: 3px solid $black-03;
+    padding: 15px;
     transition: transform .1s ease-in;
 
     a {
         &:active { transform: scale(.95); }
     }
 
+    .info {
+        .categories {
+            ul {
+                display: inline-block;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    &:not(:last-child)::after {
+                        content: ', ';
+                    }
+                }
+            }
+        }
+    }
+
     aside {
-        color: $black-07;
+        color: var(--primary-color-07);
         font-size: .9rem;
         text-align: left;
+        font-weight: 600;
 
         span:not(:last-child):after {
             content: '·';
@@ -24,23 +45,25 @@
         }
     }
 
-    header {
-        display: inline-block;
-        margin-top: 15px;
+    &:not(.full) {
+        header {
+            display: inline-block;
+            margin-top: 15px;
 
-        .title {
-            &,
-            a {
-                color: $black;
-                font-size: 1.5rem;
-                line-height: 1.2;
-                text-decoration: underline;
+            .title {
+                &,
+                a {
+                    color: var(--primary-color);
+                    font-size: 1.8rem;
+                    line-height: 1.2;
+                    text-decoration: underline;
+                }
             }
         }
     }
 
-    &.entry-content {
-        color: $black;
+    .entry-content {
+        color: var(--primary-color);
         font-size: 1rem;
         line-height: 1.6;
 
@@ -81,15 +104,22 @@
             font-size: .9em;
             padding: .5em;
             white-space: pre-wrap;
+
+            code {
+                background-color: var(--code-background);
+                color: var(--code-color);
+                display: block;
+                padding: 0;
+            }
         }
 
         code {
-            background-color: $black;
-            color: $white;
-            display: block;
+            background-color: var(--page-background);
+            color: var(--primary-color);
+            display: inline-block;
             font-family: monospace;
             font-size: .9em;
-            padding: .5em;
+            padding: .2em;
             white-space: pre-wrap;
         }
 
@@ -100,7 +130,7 @@
             quotes: "\201C""\201D""\2018""\2019";
 
             :before {
-                color: $black-03;
+                color: var(--primary-color-03);
                 content: open-quote;
                 font-size: 3em;
                 line-height: .1em;
@@ -111,23 +141,24 @@
         }
 
         table {
-            border: 1px solid $black-03;
+            border: 1px solid var(--table-border);
             border-collapse: collapse;
             font-size: 1em;
             margin: .5em 0;
             width: 100%;
 
             td, th {
-                border: 1px solid #a1a1a1;
+                border: 1px solid var(--table-border);
                 padding: 0.2em;
             }
 
-            tr:nth-child(odd) { background: $white; }
-            tr:nth-child(even)  { background: $page-background; }
+            tr:nth-child(odd) { background: var(--table-odd); }
+            tr:nth-child(even)  { background: var(--table-even); }
         }
 
         hr {
-            border-color: $black-03;
+            border: 0;
+            border-bottom: 1px dashed var(--primary-color-03);
         }
     }
 }

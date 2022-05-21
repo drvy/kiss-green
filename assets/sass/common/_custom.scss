@@ -1,15 +1,15 @@
-.cat-php {
-    background-color: #4f5b93;
-    color: $white;
+.type-security {
+    background-color: #d6fcf7;
 }
 
-.cat-wordpress {
-    background-color: #0073aa;
-    color: $white;
+.type-wordpress {
+    background-color: #e9e7fc;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #242233;
+    }
 }
 
-.cat-security {
-    background-color: $black;
-    color: $white;
+.type-php {
+    background-color: #e9e7fc;
 }
-

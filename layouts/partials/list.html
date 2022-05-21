@@ -1,5 +1,4 @@
-
-<article class="post-entry">
+<article class="post-entry {{ range(.Params.categories) }} type-{{ . | urlize }} {{ end }}">
     <header>
         <h2 class="title">
             <a href="{{ .Permalink }}" title="{{- .Title }}">{{- .Title }}</a>
@@ -12,6 +11,14 @@
 
     <aside class="info">
         <span class="read-time">{{ .ReadingTime }} min</span>
-        <span class="tags">php</span>
+            {{ with .Params.categories }}
+                <span class="categories">
+                    <ul>
+                        {{ range . }}
+                            <li>{{- . -}}</li>
+                        {{ end }}
+                    </ul>
+                </span>
+            {{ end }}
     </aside>
 </article>

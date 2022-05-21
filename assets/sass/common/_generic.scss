@@ -1,18 +1,11 @@
-* {
-    &::selection,
-    &::-moz-selection {
-        background: $yellow;
-        color: $black;
-    }
-}
-
+html,
 body {
-    color: $black;
-    background-color: $page-background;
-    font-family: $primary-font;
-    font-size: 16px;
+    color: var(--primary-color);
+    background-color: var(--page-background);
+    font-family: var(--primary-font);
+    font-size: 18px;
+    line-height: 24px;
 }
-
 .wrap {
     margin: 0 auto;
     max-width: 1024px;
@@ -32,7 +25,7 @@ a {
 
     &:active,
     &:focus {
-        border: 2px solid $black-03;
+        border: 2px solid var(--primary-color-03);
     }
 
     &:active {
