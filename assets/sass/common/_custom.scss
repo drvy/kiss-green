@@ -4,6 +4,10 @@
 
 .type-wordpress {
     background-color: #e9e7fc;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #242233;
+    }
 }
 
 .type-php {
