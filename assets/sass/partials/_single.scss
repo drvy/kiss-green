@@ -1,5 +1,7 @@
 .single {
     article {
+        @extend .pad-remover;
+
         margin-top: 15px;
 
         header {
