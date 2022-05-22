@@ -26,29 +26,17 @@
             }
 
             .info {
-                align-items: stretch;
                 box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                justify-content: stretch;
                 margin-top: 1em;
                 width: 100%;
 
-                @media screen and (min-width: $md) {
-                    align-items: center;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                }
-
                 span {
                     background-color: var(--primary-background);
-                    border: 1px solid var(--primary-color-03);
-                    border-radius: .25rem;
                     color: var(--primary-color-07);
                     display: block;
                     font-weight: normal;
                     margin-top: 5px;
-                    padding: 5px;
+                    padding: 5px 0px;
                     width: 100%;
 
                     @media screen and (min-width: $md) {
