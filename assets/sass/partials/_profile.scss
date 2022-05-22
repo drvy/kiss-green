@@ -13,10 +13,10 @@
     }
 
     .social-icons {
-        display: flex;
-        list-style: none inside;
         align-items: center;
+        display: flex;
         justify-content: flex-end;
+        list-style: none inside;
         margin-top: 15px;
 
         li {
@@ -26,8 +26,8 @@
 
             a {
                 display: block;
-                padding: 0;
                 line-height: 0;
+                padding: 0;
 
                 svg {
                     width: 28px;

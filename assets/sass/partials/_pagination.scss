@@ -1,17 +1,17 @@
 .pagination {
     @extend .pad;
 
-    padding-top: 0;
     padding-bottom: 0;
+    padding-top: 0;
 
     ul {
-        color: var(--primary-color);
-        list-style: none;
-        display: flex;
         align-items: center;
+        color: var(--primary-color);
+        display: flex;
         justify-content: space-between;
-        padding: 0;
+        list-style: none;
         margin: 0;
+        padding: 0;
 
         li {
             width: 100%;
@@ -29,9 +29,9 @@
             }
 
             a {
-                color: var(--primary-color);
                 background-color: var(--primary-background);
                 border-bottom: 2px solid var(--primary-color-03);
+                color: var(--primary-color);
                 padding: 5px;
                 text-decoration: none;
             }

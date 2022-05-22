@@ -11,9 +11,9 @@ header.main-header {
     flex-wrap: warp;
     justify-content: space-between;
     margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
     max-width: $nav-max-width;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
     .themeSwitch {
         cursor: pointer;
@@ -22,8 +22,8 @@ header.main-header {
     }
 
     section {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: space-between;
         padding: 10px 0px;
         width: 100%;
@@ -67,8 +67,8 @@ header.main-header {
                 display: inline-block;
 
                 a {
-                    text-decoration: underline;
                     padding: 2px 4px 2px 0;
+                    text-decoration: underline;
 
                     &:hover {
                         text-decoration: underline;

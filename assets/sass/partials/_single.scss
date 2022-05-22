@@ -54,19 +54,19 @@
                     }
 
                     &::after {
-                        display: inline-block;
-                        content: " ";
-                        white-space: pre;
                         border: 2px solid transparent;
+                        content: " ";
+                        display: inline-block;
+                        white-space: pre;
                     }
 
                     a {
                         padding: 0;
 
                         &:not(:last-child)::after {
+                            color: inherit;
                             content: ',';
                             font-size: 1em;
-                            color: inherit;
                         }
                     }
                 }

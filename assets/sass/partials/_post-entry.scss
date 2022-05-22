@@ -11,8 +11,8 @@
         .categories {
             ul {
                 display: inline-block;
-                padding: 0;
                 list-style: none;
+                padding: 0;
 
                 li {
                     display: inline-block;
@@ -29,16 +29,16 @@
     aside {
         color: var(--primary-color-07);
         font-size: .9rem;
-        text-align: left;
         font-weight: 600;
+        text-align: left;
 
         span:not(:last-child):after {
             content: '·';
             display: inline;
             font-size: 1.5rem;
             margin: 0 3px;
-            width: 100%;
             vertical-align: middle;
+            width: 100%;
         }
     }
 
