@@ -64,34 +64,70 @@ $code-color--dark: $primary-color--dark;
     --primary-font: #{$primary-font};
     --code-font: #{$code-font};
 
-    --primary-color: #{$primary-color--light};
-    --primary-color-07: #{$primary-color-07--light};
-    --primary-color-03: #{$primary-color-03--light};
-    --primary-background: #{$primary-background--light};
-    --primary-background-07: #{$primary-background-07--light};
-    --primary-background-03: #{$primary-background-03--light};
-    --page-background: #{$page-background--light};
-    --table-background: #{$table-background--light};
-    --table-border: #{$table-border--light};
-    --table-odd: #{$table-background--light};
-    --table-even: #{$table-even--light};
-    --code-background: #{$code-background--light};
-    --code-color: #{$code-color--light};
+    @media (prefers-color-scheme: light) {
+        --primary-color: #{$primary-color--light};
+        --primary-color-07: #{$primary-color-07--light};
+        --primary-color-03: #{$primary-color-03--light};
+        --primary-background: #{$primary-background--light};
+        --primary-background-07: #{$primary-background-07--light};
+        --primary-background-03: #{$primary-background-03--light};
+        --page-background: #{$page-background--light};
+        --table-background: #{$table-background--light};
+        --table-border: #{$table-border--light};
+        --table-odd: #{$table-background--light};
+        --table-even: #{$table-even--light};
+        --code-background: #{$code-background--light};
+        --code-color: #{$code-color--light};
 
-    @media (prefers-color-scheme: dark) {
-        --primary-color: #{$primary-color--dark};
-        --primary-color-07: #{$primary-color-07--dark};
-        --primary-color-03: #{$primary-color-03--dark};
-        --primary-background: #{$primary-background--dark};
-        --primary-background-07: #{$primary-background-07--dark};
-        --primary-background-03: #{$primary-background-03--dark};
-        --page-background: #{$page-background--dark};
-        --table-background: #{$table-background--dark};
-        --table-border: #{$table-border--dark};
-        --table-odd: #{$table-background--dark};
-        --table-even: #{$table-even--dark};
-        --code-background: #{$code-background--dark};
-        --code-color: #{$code-color--dark};
+        &[data-theme='dark'] {
+            --primary-font: #{$primary-font};
+            --code-font: #{$code-font};
+
+            --primary-color: #{$primary-color--dark};
+            --primary-color-07: #{$primary-color-07--dark};
+            --primary-color-03: #{$primary-color-03--dark};
+            --primary-background: #{$primary-background--dark};
+            --primary-background-07: #{$primary-background-07--dark};
+            --primary-background-03: #{$primary-background-03--dark};
+            --page-background: #{$page-background--dark};
+            --table-background: #{$table-background--dark};
+            --table-border: #{$table-border--dark};
+            --table-odd: #{$table-background--dark};
+            --table-even: #{$table-even--dark};
+            --code-background: #{$code-background--dark};
+            --code-color: #{$code-color--dark};
+
+        }
+    }
+
+    --primary-color: #{$primary-color--dark};
+    --primary-color-07: #{$primary-color-07--dark};
+    --primary-color-03: #{$primary-color-03--dark};
+    --primary-background: #{$primary-background--dark};
+    --primary-background-07: #{$primary-background-07--dark};
+    --primary-background-03: #{$primary-background-03--dark};
+    --page-background: #{$page-background--dark};
+    --table-background: #{$table-background--dark};
+    --table-border: #{$table-border--dark};
+    --table-odd: #{$table-background--dark};
+    --table-even: #{$table-even--dark};
+    --code-background: #{$code-background--dark};
+    --code-color: #{$code-color--dark};
+
+    &[data-theme='light'] {
+        --primary-color: #{$primary-color--light};
+        --primary-color-07: #{$primary-color-07--light};
+        --primary-color-03: #{$primary-color-03--light};
+        --primary-background: #{$primary-background--light};
+        --primary-background-07: #{$primary-background-07--light};
+        --primary-background-03: #{$primary-background-03--light};
+        --page-background: #{$page-background--light};
+        --table-background: #{$table-background--light};
+        --table-border: #{$table-border--light};
+        --table-odd: #{$table-background--light};
+        --table-even: #{$table-even--light};
+        --code-background: #{$code-background--light};
+        --code-color: #{$code-color--light};
     }
 }
 
