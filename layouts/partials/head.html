@@ -6,13 +6,18 @@
 
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
 
-    {{ $styleOptions := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $styleOptions := (dict "targetPath" "kiss-green.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | fingerprint }}
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400,700&display=swa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+    <link crossorigin="anonymous" rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
-    <link crossorigin="anonymous" rel="preload stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <script>
+        const storedTheme = localStorage.getItem('theme');
+        const theme = (storedTheme ? storedTheme : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        document.documentElement.setAttribute('data-theme', (theme === 'light' ? 'light' : 'dark'));
+    </script>
 </head>
