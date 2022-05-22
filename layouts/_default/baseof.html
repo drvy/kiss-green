@@ -27,5 +27,10 @@
 
         {{ partial "footer.html" . }}
     </div>
+
+
+    {{ $jsOptions := (dict "targetPath" "kiss-green.js" "minify" true) }}
+    {{ $kissJs := resources.Get "js/kiss-green.js" | js.Build $jsOptions | fingerprint }}
+    <script integrity="{{ $kissJs.Data.Integrity }}" src="{{ $kissJs.Permalink }}"></script>
 </body>
 </html>
