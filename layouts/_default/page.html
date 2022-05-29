@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<article class="post-entry full">
+    <header>
+        <h1 class="title">{{ .Title }}</h1>
+    </header>
+
+    <section class="entry-content">
+        {{- if and (ge (len .TableOfContents) 50) (ne .Site.Params.TableOfContents "false") -}}
+            <div class="table-contents">
+                <span>{{ i18n "contents" }}</span>
+                {{ .TableOfContents }}
+            </div>
+        {{- end -}}
+
+        {{ .Content | safeHTML }}
+    </section>
+</article>
+
+{{ end }}

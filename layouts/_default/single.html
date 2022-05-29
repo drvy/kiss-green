@@ -23,7 +23,7 @@
     </header>
 
     <section class="entry-content">
-            {{- if and (ge (len .TableOfContents) 50) (ne .Site.Params.TableOfContents "false") -}}
+        {{- if and (ge (len .TableOfContents) 50) (ne .Site.Params.TableOfContents "false") -}}
             <div class="table-contents">
                 <span>{{ i18n "contents" }}</span>
                 {{ .TableOfContents }}
