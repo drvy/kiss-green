@@ -10,7 +10,7 @@ header.main-header {
     flex-direction: column;
     flex-wrap: warp;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 25px 0;
     max-width: $nav-max-width;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -69,6 +69,10 @@ header.main-header {
                 a {
                     padding: 2px 4px 2px 0;
                     text-decoration: underline;
+
+                    &.active {
+                        font-weight: bold;
+                    }
 
                     &:hover {
                         text-decoration: underline;
