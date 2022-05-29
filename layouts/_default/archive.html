@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<article class="post-entry full archive">
+    <header>
+        <h1 class="title">{{ .Title }}</h1>
+    </header>
+
+    <section class="entry-content">
+        {{ .Content }}
+
+        <div class="archive-category__list">
+        {{ range $catName, $category := .Site.Taxonomies.categories }}
+            <hr>
+            <div class="archive-category__item">
+                <div class="archive-category__head">
+                    <h3>{{ $catName | humanize }}</h3>
+                    <sup>({{ len $category }})</sup>
+                </div>
+
+
+                <div class="archive-category__posts">
+                    {{ range $category.Pages }}
+                        <div class="archive-category__post">
+                            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                            <span>
+                                {{- if not .Date.IsZero -}}
+                                    {{- (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat)) }}
+                                {{- end }}
+                                ·
+                                {{ .ReadingTime }} {{ i18n "min" }}
+                            </span>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+        <hr>
+        </div>
+    </section>
+</article>
+
+{{ end }}
