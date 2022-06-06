@@ -3,17 +3,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="color-scheme" content="dark light">
+    <meta name="robots" content="index, follow">
 
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    {{- if .IsHome }}
+        {{- with .Site.Params.keywords -}}
+            <meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" />
+        {{ end }}
+    {{- else }}
+        <meta name="keywords" content="{{ if .Params.keywords -}}
+            {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
+            {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}" />
+    {{- end }}
+
+    <link rel="canonical" href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}" />
+    <meta name="author" content="{{ (partial "author.html" . ) }}">
+
+    {{- if .Site.Params.analytics.google.SiteVerificationTag }}
+        <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
+    {{- end }}
+
+    {{- if .Site.Params.analytics.yandex.SiteVerificationTag }}
+        <meta name="yandex-verification" content="{{ .Site.Params.analytics.yandex.SiteVerificationTag }}" />
+    {{- end }}
+
+    {{- if .Site.Params.analytics.bing.SiteVerificationTag }}
+        <meta name="msvalidate.01" content="{{ .Site.Params.analytics.bing.SiteVerificationTag }}" />
+    {{- end }}
 
     {{ $styleOptions := (dict "targetPath" "kiss-green.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $styleOptions | fingerprint }}
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+    <link crossorigin="anonymous" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap">
     <link crossorigin="anonymous" rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+
+    <link rel="icon" href="{{ .Site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+    <link rel="apple-touch-icon" href="{{ .Site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
+    <link rel="mask-icon" href="{{ .Site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
+    <meta name="theme-color" content="#2e2e33">
+    <meta name="msapplication-TileColor" content="#2e2e33">
+
+    {{- /* RSS */}}
+    {{ range .AlternativeOutputFormats -}}
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end -}}
+
+    {{- range .AllTranslations -}}
+        <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+
+    {{- template "partials/templates/opengraph.html" . }}
+    {{- template "partials/templates/twitter_cards.html" . }}
+    {{- template "partials/templates/schema_json.html" . }}
 
     <script>
         const storedTheme = localStorage.getItem('theme');
