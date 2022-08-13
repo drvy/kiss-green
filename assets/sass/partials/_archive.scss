@@ -1,0 +1,54 @@
+.archive {
+    .archive-category__list {
+        margin-top: 50px;
+    }
+
+    .archive-category__item {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .archive-category__head {
+        align-items: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        margin: 25px 0;
+        min-width: 300px;
+
+        h3 {
+            color: var(--primary-color);
+        }
+
+        sup {
+            color: var(--primary-color-07);
+            font-size: 1rem;
+            font-weight: bold;
+            margin-left: 5px;
+            margin-top: -5px;
+        }
+    }
+
+    .archive-category__posts {
+        width: 100%;
+
+        .archive-category__post {
+            padding: 5px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            a {
+                display: block;
+                color: var(--primary-color);
+            }
+
+            span {
+                display: block;
+                font-size: .9rem;
+                color: var(--primary-color-03);
+            }
+        }
+    }
+}
