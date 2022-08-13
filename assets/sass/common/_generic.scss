@@ -3,8 +3,8 @@ body {
     background-color: var(--page-background);
     color: var(--primary-color);
     font-family: var(--primary-font);
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 22px;
+    line-height: 28px;
 }
 
 .wrap {
@@ -49,11 +49,12 @@ a {
 
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Miriam Libre';
     font-weight: 600;
 }
 
-h1 { font-size: 1.8rem; line-height: 2rem; }
-h2 { font-size: 1.6rem; line-height: 1.8rem; }
-h3 { font-size: 1.4rem; line-height: 1.6rem; }
-h4 { font-size: 1.2rem; line-height: 1.4rem; }
+h1 { font-size: 1.6rem; line-height: 3rem; }
+h2 { font-size: 1.4rem; line-height: 1.8rem; }
+h3 { font-size: 1.2rem; line-height: 1.6rem; }
+h4 { font-size: 1rem; line-height: 1.4rem; }
 h5, h6 { font-size: 1rem; line-height: 1.2rem; }
