@@ -2,6 +2,8 @@
     margin-bottom: 15px;
     padding: 15px;
     transition: transform .1s ease-in;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    border-radius: 3px;
 
     a {
         &:active { transform: scale(.95); }
@@ -51,8 +53,6 @@
                 &,
                 a {
                     color: var(--primary-color);
-                    font-size: 1.8rem;
-                    line-height: 1.2;
                     text-decoration: underline;
                 }
             }
@@ -62,7 +62,6 @@
     .entry-content {
         color: var(--primary-color);
         font-size: 1rem;
-        line-height: 1.6;
 
         & > h1,
         & > h2,

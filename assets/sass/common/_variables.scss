@@ -1,5 +1,5 @@
 // Fonts
-$primary-font: 'Spectral', serif;
+$primary-font: 'Spectral', sans-serif;
 $code-font: 'monospace';
 
 // Resolutions
@@ -10,7 +10,7 @@ $md: 760px;
 $lg: 1300px;
 
 // Light theme
-$white--light: #fff;
+$white--light: #fafafa;
 $black--light: #212529;
 $page-background--light: #fafafa;
 
@@ -35,9 +35,9 @@ $code-color--light: $primary-color--light;
 
 
 // Dark theme
-$white--dark: rgb(13, 26, 28);
+$white--dark: rgb(13, 17, 23);
 $black--dark: rgb(211, 219, 227);
-$page-background--dark: rgb(13, 26, 28);
+$page-background--dark: rgb(13, 17, 23);
 
 $black-07--dark: rgba($black--dark, .7);
 $black-03--dark: rgba($black--dark, .3);
